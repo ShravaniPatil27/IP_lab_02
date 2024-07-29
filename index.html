@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Shirt Order Form</title>
+</head>
+<body>
+    <center>
+        <h1><u>Custom T-Shirt Order Form</u></h1>
+        <form action="/submit-order" method="post">
+            <!-- Tagline Section -->
+            <fieldset style="width: 80%;">
+                <legend><b>Tagline on the Shirt</b></legend>
+                <label for="tagline">Tagline:</label>
+                <input type="text" id="tagline" name="tagline" placeholder="Enter your tagline" required>
+            </fieldset>
+            <br><br>
+            
+            <!-- Color and Size Section -->
+            <fieldset style="width: 80%;">
+                <legend><b>Select T-Shirt Details</b></legend>
+                
+                <label for="color">Color:</label>
+                <select id="color" name="color" required>
+                    <option value="" disabled selected>Select a color</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
+                </select>
+                <br><br>
+                
+                <label for="size">Size:</label>
+                <select id="size" name="size" required>
+                    <option value="" disabled selected>Select a size</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="xlarge">X-Large</option>
+                </select>
+            </fieldset>
+            <br><br>
+
+            <!-- Quantity and Delivery Date Section -->
+            <fieldset style="width: 80%;">
+                <legend><b>Order Details</b></legend>
+                
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                <br><br>
+                
+                <label for="delivery-date">Delivery Date:</label>
+                <input type="date" id="delivery-date" name="delivery-date" required>
+            </fieldset>
+            <br><br>
+            
+            <!-- Delivery Details Section -->
+            <fieldset style="width: 80%;">
+                <legend><b>Delivery Details</b></legend>
+                
+                <label for="recipient-name">Recipient's Name:</label>
+                <input type="text" id="recipient-name" name="recipient-name" placeholder="Enter recipient's name" required>
+                <br><br>
+                
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" placeholder="Enter delivery address" required>
+                <br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <br><br>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}">
+            </fieldset>
+            <br><br>
+            
+            <!-- Additional Comments Section -->
+            <fieldset style="width: 80%;">
+                <legend><b>Additional Comments</b></legend>
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter any additional comments or special instructions"></textarea>
+            </fieldset>
+            <br><br>
+            
+            <!-- Submit and Reset Buttons -->
+            <fieldset style="width: 80%;">
+                <input type="submit" value="Place Order">
+                <input type="reset" value="Reset Form">
+            </fieldset>
+        </form>
+    </center>
+</body>
+</html>
